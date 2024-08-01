@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/2d9b67a497.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="todo-container-box" class="todo-container">
+        <div class="heading">
+            <h1 class="heading">To-Do Note</h1>
+    
+                <label for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle">
+                    <i class="fa-solid fa-moon"></i>
+                </label>
+                    </div>
+
+            <!-- <input type="text" id="new-task" placeholder="&#xf0ae; Add a new task">             -->
+             <!-- *_*_*_*_*_*_*_*_*_* ADD TASK *_*_*_*_*_*_*_*_*_*  -->
+            <div class="input-container">
+                <i class="fa-solid fa-list-check"></i>
+                <input type="text" id="new-task" placeholder="Add a new task">
+                <i class="fa-solid fa-plus" id='add-task-icon' ></i>
+            </div>
+        
+            <!-- *_*_*_*_*_*_*_*_*_* CONTROL BUTTONS *_*_*_*_*_*_*_*_*_*  -->
+        <div class="control-buttons">
+            <span id="clear-completed">Clear Completed</span>
+            <span id="complete-all">Complete All</span>
+        </div>
+        <hr>
+        
+        <!-- *_*_*_*_*_*_*_*_*_* TASK LIST *_*_*_*_*_*_*_*_*_*  -->
+        <ul id="task-list" style="list-style-type: circle;"></ul>
+        <hr>
+
+        <!-- *_*_*_*_*_*_*_*_*_* FOOTER *_*_*_*_*_*_*_*_*_*  -->
+         <footer> 
+            <div class="task-left">
+                <span></span>
+            </div>
+             <div class="filter-buttons">
+                 <span id="all">All</span>
+                 <span id="completed">Completed</span>
+                 <span id="incomplete">Incomplete</span>
+             </div>
+         </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const themeLabel = document.querySelector('label[for="theme-toggle"] i');
+        themeLabel.addEventListener('click', toggleSwitch);
+        // const newTask = document.querySelector("#new-task");
+        // newTask.classList.add("fa-solid" ,"fa-list-check");
+    </script>
+</body>
+</html>

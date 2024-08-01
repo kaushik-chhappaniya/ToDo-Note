@@ -1,0 +1,207 @@
+body {
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 95vh;
+   background-color: #f0f0f0;
+}
+/* *_*_*_*_*_*_*_*_*_*  Heading *_*_*_*_*_*_*_*_*_*  */
+.heading {
+   color: black;
+   text-align: center;
+   margin: 5px;
+   padding: 2px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+/* *_*_*_*_*_*_*_*_*_*_* Dark Mode  *_*_*_*_*_*_*_*_*_*_* */
+
+#theme-toggle {
+   display: none; /* Hide the checkbox visually */
+   cursor: none;
+}
+#theme-toggle:hover {
+cursor: pointer;
+}
+
+#theme-toggle + i:hover {
+   cursor: pointer; /* Make the icon clickable */
+}
+
+.todo-container-dark {
+   background: rgb(165, 164, 164) !important;
+   box-shadow: 0 0 15px 6px rgb(222 166 166) !important;
+   color: rgb(53, 51, 48) !important;
+}
+
+/* Optional: Style for dark theme */
+.dark-theme {
+   background-color: #192655;
+   color: #fff;
+}
+
+.dark-theme #theme-toggle + i {
+   color: #2155cd; /* Adjust icon color for dark theme */
+}
+
+label[for="theme-toggle"] i,
+label[for="theme-toggle"] {
+   /* margin-left: 5px;
+    padding: 10px; */
+   color: #937dc2;
+   font-size: 20px;
+   /* left: 70%; */
+   position: sticky;
+   /* border: 2px red solid; */
+}
+
+/* *_*_*_*_*_*_*_*_*_*  Task Container *_*_*_*_*_*_*_*_*_*  */
+
+.input-container {
+   display: flex;
+   align-items: center;
+   background-color: lightgrey;
+   border-radius: 8px;
+   padding: 10px 5px;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input[type="text"] {
+   width: 70%;
+   border: none;
+   background: none;
+   outline: none;
+   flex-grow: 1;
+   padding: 5px 5px;
+   font-size: 16px;
+   margin-left: 2px;
+   box-sizing: border-box;
+}
+
+/* .input-container input[type="text"]:focus + .fa-plus {
+    display: block;
+} */
+
+#add-task-icon {
+   cursor: pointer;
+   width: 30px;
+   text-align: center;
+}
+#add-task-icon:hover {
+   transform: scale(1.3);
+   box-shadow: 0px 0px 11px 6px #79b0d2;
+}
+
+/* LIST */
+
+#todo-container-box {
+   border-radius: 8px;
+   padding: 20px;
+   width: 300px;
+
+}
+
+.todo-container {
+   background: white;
+   box-shadow: 0 0 13px 10px rgb(107 143 185);
+}
+ul {
+   list-style-type: none;
+   padding: 0;
+   overflow-y:scroll;
+   max-height: 250px;
+}
+
+li {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   border-bottom: 1px solid #ddd;
+}
+
+li span:nth-child(2) {
+   justify-content: start;
+}
+
+li.completed {
+   text-decoration: line-through;
+   text-decoration-thickness: 3px;
+   color: #aaa;
+}
+.li-completed-dark {
+    color: rgb(226, 27, 27) !important;
+}
+.check-button,
+.delete-button {
+   cursor: pointer;
+   margin-left: 10px;
+}
+
+.check-button:hover,
+.delete-button:hover {
+   display: inline;
+   box-shadow: 0px 0px 11px 6px #79b0d2;
+   border-radius: 20px;
+   transform: scale(1.3);
+}
+
+/* *_*_*_*_*_*_*_*_*_*  Control Buttons *_*_*_*_*_*_*_*_*_*  */
+
+button {
+   padding: 10px;
+   margin: 5px;
+}
+
+.control-buttons,
+.filter-buttons {
+   display: flex;
+   justify-content: space-between;
+   margin: 5px;
+   cursor: pointer;
+}
+
+.control-buttons span,
+.filter-buttons span {
+   width: fit-content;
+   padding: 5px;
+   border: 2px #EF5A6F solid;
+   box-shadow: 0px 0px 9px 5px #e5efd6;
+   cursor: pointer;
+}
+
+.control-buttons span:hover,
+.filter-buttons span:hover {
+   cursor: pointer;
+   transform: scale(1.3);
+}
+/* *_*_*_*_*_*_*_*_*_* TASK LEFT *_*_*_*_*_*_*_*_*_*  */
+.task-left {
+   margin: 5px 0px 10px 15px;
+}
+
+/* *_*_*_*_*_*_*_*_*_* Filter Buttons *_*_*_*_*_*_*_*_*_*  */
+
+#completed,
+#incomplete,
+#all {
+   background-color: #FFDFD6;
+   border-radius: 25px;
+}
+#completed:focus,
+#incomplete:focus,
+#all:focus,
+#clear-completed:focus,
+#complete-all:focus {
+   background-color: lightblue !important;
+   transform: scale(1.2);
+   border: #EF5A6F solid 1px;
+}
+
+#clear-completed,
+#complete-all {
+   border-radius: 20px;
+   background-color: #FFAAAA;
+}
